@@ -1,0 +1,16 @@
+"Header"
+  - Logo
+  - Navigation Menus
+    - About Us
+    - Cart
+    - Available Locations
+    - Account Details
+
+"Body"
+  - Search Bar
+  - Card Container (Restaurant Container)
+    - Ind. Restaurants
+    - Ind. Restaurants
+
+"Footer"
+  - Copyrights
