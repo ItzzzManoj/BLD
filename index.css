@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px;
+  border-bottom: 0.3px solid black;
+  background: rgb(103 103 103);
+  color: white;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 25px;
+}
+
+.logo {
+  width: 70px;
+  margin-right: 10px;
+}
+
+.logo-name {
+  font-weight: 600;
+  font-size: 50px;
+}
+
+.header > ul {
+  list-style-type: none;
+  margin-right: 25px;
+}
+
+.header > ul > li {
+  display: inline;
+  padding: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
