@@ -41,3 +41,50 @@
   font-size: 25px;
   cursor: pointer;
 }
+
+.body-container {
+  width: 95%;
+  margin: 50px auto;
+}
+
+.search-container {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.search-container > input {
+  height: 50px;
+  width: 250px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.individual-card {
+  padding: 10px;
+  border: 0.5px solid black;
+  margin: 25px;
+}
+
+.image-container > img {
+  width: 275px;
+}
+
+.individual-card > h1,
+.individual-card > h2,
+.individual-card > h3,
+.individual-card > h4 {
+  margin: 10px 0px;
+}
+
+.individual-card > h2,
+.individual-card > h3,
+.individual-card > h4 {
+  font-weight: 400;
+}
