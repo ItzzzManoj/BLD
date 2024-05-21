@@ -52,12 +52,17 @@
   text-align: center;
 }
 
-.search-container > input {
+.search-container > input, .filter-btn {
   height: 50px;
   width: 250px;
   text-align: center;
   border: 1px solid black;
   border-radius: 10px;
+}
+
+.filter-btn {
+  cursor: pointer;
+  margin-left: 20px;
 }
 
 .card-container {
