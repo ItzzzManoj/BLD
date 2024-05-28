@@ -9,14 +9,16 @@ const HeaderComponent = () => {
 
   return (
     <header className="header">
-      <div className="logo-container">
-        <img
-          src={LOGO_URL}
-          alt=""
-          className="logo"
-        />
-        <span className="logo-name">BLD</span>
-      </div>
+      <Link to="/">
+        <div className="logo-container">
+          <img
+            src={LOGO_URL}
+            alt=""
+            className="logo"
+          />
+          <span className="logo-name">BLD</span>
+        </div>
+      </Link>
       <ul>
         <li>
           <Link to="/about">
