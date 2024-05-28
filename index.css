@@ -42,6 +42,11 @@
   cursor: pointer;
 }
 
+.header > ul > li > a {
+  color: white;
+  text-decoration: none;
+}
+
 .header > ul > button {
   padding: 10px 20px;
   position: relative;
@@ -130,4 +135,15 @@
   height: 400px;
   background-color: #f0f0f0;
   margin: 25px;
+}
+
+.about-container, .cart-container, .location-container, .account-details-container {
+  width: 50%;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.about-container > h3 {
+  font-size: 25px;
+  margin-bottom: 25px;
 }

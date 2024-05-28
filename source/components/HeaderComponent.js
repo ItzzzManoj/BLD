@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { LOGO_URL } from '../utils/constants';
+import { Link } from "react-router-dom";
+import AboutComponent from './AboutComponent';
 
 const HeaderComponent = () => {
 
@@ -16,10 +18,26 @@ const HeaderComponent = () => {
         <span className="logo-name">BLD</span>
       </div>
       <ul>
-        <li>About Us</li>
-        <li>Cart</li>
-        <li>Available Locations</li>
-        <li>Account Details</li>
+        <li>
+          <Link to="/about">
+            About Us
+            </Link>
+        </li>
+        <li>
+          <Link to="/cart">
+            Cart
+          </Link>
+        </li>
+        <li>
+          <Link to="/available-locations">
+            Available Locations
+          </Link>
+        </li>
+        <li>
+          <Link to="/account-details">
+            Account Details
+          </Link>
+        </li>
         <button 
           type="button"
           onClick={() => {
