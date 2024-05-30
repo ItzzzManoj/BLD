@@ -42,7 +42,9 @@
   cursor: pointer;
 }
 
-.header > ul > li > a, .header > a {
+.header > ul > li > a,
+.header > a,
+.individual-card {
   color: white;
   text-decoration: none;
 }
@@ -104,16 +106,16 @@
   height: 200px;
 }
 
-.individual-card > h1,
-.individual-card > h2,
-.individual-card > h3,
-.individual-card > h4 {
+.individual-card-container > h1,
+.individual-card-container > h2,
+.individual-card-container > h3,
+.individual-card-container > h4 {
   margin: 10px 0px;
 }
 
-.individual-card > h2,
-.individual-card > h3,
-.individual-card > h4 {
+.individual-card-container > h2,
+.individual-card-container > h3,
+.individual-card-container > h4 {
   font-weight: 400;
 }
 
@@ -137,7 +139,7 @@
   margin: 25px;
 }
 
-.about-container, .cart-container, .location-container, .account-details-container {
+.about-container, .cart-container, .location-container, .account-details-container, .error-container {
   width: 50%;
   margin: 50px auto;
   text-align: center;
@@ -145,5 +147,62 @@
 
 .about-container > h3 {
   font-size: 25px;
+  margin-bottom: 25px;
+}
+
+.error-container > h1 {
+  font-size: 40px;
+}
+
+.error-container > h2 {
+  font-size: 30px;
+}
+
+.individual-card {
+  color: #000;
+}
+
+.res-details-container {
+  width: 75%;
+  margin: 50px auto;
+}
+
+.restaurant-details {
+  padding-bottom: 50px;
+  border-bottom: 0.5px solid #000;
+}
+
+.restaurant-details > h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 35px;
+}
+
+.restaurant-details > p {
+ font-size: 25px;
+ text-align: center;
+}
+
+.res-menu-container {
+  margin: 25px 0px;
+}
+
+.res-menu-container > ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.res-menu-container > ul > li {
+  width: 250px;
+  border: 1px solid #f0f0f0;
+  margin: 10px;
+  padding: 50px 25px;
+  background: darkcyan
+}
+
+.res-menu-container > h4 {
+  font-size: 30px;
+  text-align: center;
   margin-bottom: 25px;
 }

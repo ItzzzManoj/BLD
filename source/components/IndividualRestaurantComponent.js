@@ -16,7 +16,7 @@ const IndividualRestaurantComponent = (props) => {
   console.log();
 
   return (
-    <div className="individual-card">
+    <div className="individual-card-container">
       <div className="image-container">
         <img
           src={ RES_IMG_URL + cloudinaryImageId }
