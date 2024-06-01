@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import AppComponent from "./components/AppComponent";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import AboutComponent from "./components/AboutComponent";
-import CartComponent from "./components/CartComponent";
-import AccountDetailsComponent from "./components/AccountDetailsComponent";
-import LocationComponent from "./components/LocationComponent";
+import AppComponent from "./components/AppComponent";
+import AboutComponent from "./components/navigation-menu/AboutComponent";
+import CartComponent from "./components/navigation-menu/CartComponent";
+import AccountDetailsComponent from "./components/navigation-menu/AccountDetailsComponent";
+import LocationComponent from "./components/navigation-menu/LocationComponent";
 import BodyComponent from "./components/BodyComponent";
-import ErrorComponent from "./components/ErrorComponent";
 import RestaurantDetailsComponent from "./components/RestaurantDetailsComponent";
+import ErrorComponent from "./components/error-state/ErrorComponent";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

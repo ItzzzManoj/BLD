@@ -1,5 +1,5 @@
 import React from "react";
-import ShimmerComponent from './ShimmerComponent';
+import ShimmerComponent from './loading-state/ShimmerComponent';
 
 class UserDetailsComponent extends React.Component {
 

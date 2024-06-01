@@ -13,8 +13,6 @@ const IndividualRestaurantComponent = (props) => {
     } = {},
   } = props;
 
-  console.log();
-
   return (
     <div className="individual-card-container">
       <div className="image-container">

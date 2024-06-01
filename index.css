@@ -60,14 +60,14 @@
   margin: 50px auto;
 }
 
-.search-container {
+.search-filter-container {
   margin-bottom: 50px;
   text-align: center;
   display: flex;
   justify-content: space-evenly;
 }
 
-.search-ipt, .filter-btn {
+.search-input, .filter-btn {
   height: 50px;
   width: 250px;
   text-align: center;

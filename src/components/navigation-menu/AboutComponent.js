@@ -1,5 +1,5 @@
 import React from 'react';
-import UserDetailsComponent from './UserDetailsComponent';
+import UserDetailsComponent from '../UserDetailsComponent';
 
 class AboutComponent extends React.Component {
 

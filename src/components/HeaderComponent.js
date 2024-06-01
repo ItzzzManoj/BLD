@@ -1,10 +1,8 @@
-import { useState } from 'react';
 import { LOGO_URL } from '../utils/constants';
 import { Link } from "react-router-dom";
+import LoginStatusComponent from './navigation-menu/LoginStatusComponent';
 
 const HeaderComponent = () => {
-
-  let [ logInText, setLogInText ] = useState('Login');
 
   return (
     <header className="header">
@@ -12,10 +10,12 @@ const HeaderComponent = () => {
         <div className="logo-container">
           <img
             src={LOGO_URL}
-            alt=""
+            alt="BLD Logo"
             className="logo"
           />
-          <span className="logo-name">BLD</span>
+          <span className="logo-name">
+            BLD
+          </span>
         </div>
       </Link>
       <ul>
@@ -39,15 +39,7 @@ const HeaderComponent = () => {
             Account Details
           </Link>
         </li>
-        <button 
-          type="button"
-          onClick={() => {
-            logInText = logInText === 'Login' ? 'Logout' : 'Login';
-            setLogInText(logInText);
-          }}
-        >
-          {logInText}
-        </button>
+        <LoginStatusComponent />
       </ul>
     </header>
   );
