@@ -24,7 +24,7 @@ const AppRouter = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <AboutComponent />
+        element: <AboutComponent location="Coimbatore"/>
       }, 
       {
         path: "/cart",

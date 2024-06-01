@@ -139,7 +139,7 @@
   margin: 25px;
 }
 
-.about-container, .cart-container, .location-container, .account-details-container, .error-container {
+.about-container, .cart-container, .location-container, .account-details-container, .error-container, .about-container {
   width: 50%;
   margin: 50px auto;
   text-align: center;
@@ -205,4 +205,19 @@
   font-size: 30px;
   text-align: center;
   margin-bottom: 25px;
+}
+
+.about-title {
+  font-size: 35px;
+}
+
+.details-container {
+  margin-top: 25px;
+  font-size: 25px;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.details-container > a {
+  text-decoration: none;
 }
