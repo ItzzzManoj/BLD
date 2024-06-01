@@ -231,6 +231,8 @@
   font-size: 25px;
   border: 1px solid black;
   padding: 20px;
+  text-align: left;
+  font-size: 40px;
 }
 
 .details-container > a {

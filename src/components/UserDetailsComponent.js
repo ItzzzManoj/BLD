@@ -1,10 +1,14 @@
 import React from "react";
 import ShimmerComponent from './loading-state/ShimmerComponent';
+import { GITHUB_URL } from "../utils/constants";
+import makeFetchCall from "../utils/common-functions/makeFetchCall";
 
 class UserDetailsComponent extends React.Component {
 
   constructor(props) {
     super(props);
+
+    console.log(`Child - ${this.props.child} constructor`);
 
     this.state = {
       userInfo: null
@@ -13,41 +17,46 @@ class UserDetailsComponent extends React.Component {
 
   async componentDidMount() {
 
-    console.log(`${this.props.child} - It'll be called once the component is mounted (initial render)`);
+    console.log(`Child - ${this.props.child} componentDidMount`);
 
-    const GITHUB_URL = " https://api.github.com/users/ItzzzManoj";
-
-    const data = await fetch(GITHUB_URL);
-
-    const json = await data.json();
+    const userInfo = await makeFetchCall(GITHUB_URL);
 
     this.setState({
-      userInfo: json
+      userInfo
     });
   }
 
 
   componentDidUpdate() {
-    console.log(`${this.props.child} This hook will be called when the component is updated (On rerender)`)
+    console.log(`Child - ${this.props.child} componentDidUpdate`);
   }
 
   componentWillUnmount() {
-    console.log(`${this.props.child} This hook will be called when the component is unmounted from DOM`);
+    console.log(`Child - ${this.props.child} componentWillUnmount`);
   }
   
   render() {
 
-    if (this.state.userInfo === null) {
+    console.log(`Child - ${this.props.child} render`);
+
+    let {
+      state: {
+        userInfo = {}
+      } = {},
+      props = {}
+    } = this;
+
+    if (userInfo === null) {
       return <ShimmerComponent />;
     }
 
     return (
       <div className='details-container'>
-        <h5>Name: {this.state.userInfo.name}</h5>
-        <h5>Login: {this.state.userInfo.login}</h5>
-        <h5>Location: {this.props.location}</h5>
-        <a href={this.state.userInfo.html_url} target='_blank'>
-          My github page
+        <h5>Name: {userInfo.name}</h5>
+        <h5>Login: {userInfo.login}</h5>
+        <h5>Location: {props.location}</h5>
+        <a href={userInfo.html_url} target='_blank'>
+          Github URL
         </a>
       </div>
     )
