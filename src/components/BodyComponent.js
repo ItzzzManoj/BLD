@@ -4,10 +4,18 @@ import FilterButtonComponent from './FilterButtonComponent';
 import ShimmerComponent from './loading-state/ShimmerComponent';
 import { Link } from 'react-router-dom';
 import useResList from '../utils/hooks/useResList';
+import useOnlineStatus from '../utils/hooks/useOnlineStatus';
+import OfflineComponent from './OfflineComponent';
 
 const BodyComponent = () => {
 
   let [ resList, filteredResList, setFilteredResList ] = useResList();
+
+  let currentStatus = useOnlineStatus();
+
+  if (currentStatus === 'offline') {
+    return <OfflineComponent />
+  }
 
   if (!resList.length) {
     return <ShimmerComponent />;

@@ -1,8 +1,13 @@
 import { LOGO_URL } from '../utils/constants';
 import { Link } from "react-router-dom";
 import LoginStatusComponent from './navigation-menu/LoginStatusComponent';
+import useOnlineStatus from '../utils/hooks/useOnlineStatus';
 
 const HeaderComponent = () => {
+
+  let onlineStatus = useOnlineStatus();
+
+  onlineStatus = onlineStatus === 'online' ? '✅' : '🔴';
 
   return (
     <header className="header">
@@ -20,6 +25,9 @@ const HeaderComponent = () => {
       </Link>
       <ul>
         <li>
+          { onlineStatus }
+        </li>
+        <li>
           <Link to="/about">
             About Us
             </Link>
@@ -35,8 +43,8 @@ const HeaderComponent = () => {
           </Link>
         </li>
         <li>
-          <Link to="/account-details">
-            Account Details
+          <Link to="/instamart">
+            Instamart
           </Link>
         </li>
         <LoginStatusComponent />

@@ -1,14 +1,16 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AppComponent from "./components/AppComponent";
 import AboutComponent from "./components/navigation-menu/AboutComponent";
 import CartComponent from "./components/navigation-menu/CartComponent";
-import AccountDetailsComponent from "./components/navigation-menu/AccountDetailsComponent";
 import LocationComponent from "./components/navigation-menu/LocationComponent";
 import BodyComponent from "./components/BodyComponent";
 import RestaurantDetailsComponent from "./components/RestaurantDetailsComponent";
 import ErrorComponent from "./components/error-state/ErrorComponent";
+import ShimmerComponent from "./components/loading-state/ShimmerComponent";
+
+const InstaMartComponent = lazy(() => import("./components/navigation-menu/InstaMartComponent") );
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -35,8 +37,10 @@ const AppRouter = createBrowserRouter([
         element: <LocationComponent />
       },
       {
-        path: "/account-details",
-        element: <AccountDetailsComponent />
+        path: "/instamart",
+        element: <Suspense fallback={<ShimmerComponent />}>
+          <InstaMartComponent />
+        </Suspense>
       },
       {
         path: "/restaurant-details/:resId",

@@ -42,6 +42,11 @@
   cursor: pointer;
 }
 
+.header > ul > li:first-child {
+  position: relative;
+  top: 2px;
+}
+
 .header > ul > li > a,
 .header > a,
 .individual-card {
@@ -139,10 +144,20 @@
   margin: 25px;
 }
 
-.about-container, .cart-container, .location-container, .account-details-container, .error-container, .about-container {
+.about-container, 
+.cart-container, 
+.location-container, 
+.account-details-container, 
+.error-container, 
+.about-container,
+.offline-container {
   width: 50%;
   margin: 50px auto;
   text-align: center;
+}
+
+.account-details-container h5 {
+  font-size: 30px;
 }
 
 .about-container > h3 {
@@ -220,4 +235,8 @@
 
 .details-container > a {
   text-decoration: none;
+}
+
+.offline-container h1 {
+  font-size: 35px;
 }
