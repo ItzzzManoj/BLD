@@ -25,7 +25,10 @@ const HeaderComponent = () => {
       </Link>
       <ul>
         <li>
-          { onlineStatus }
+          Online Status: 
+          <span>
+            { onlineStatus }
+          </span>
         </li>
         <li>
           <Link to="/about">

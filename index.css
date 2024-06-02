@@ -42,7 +42,8 @@
   cursor: pointer;
 }
 
-.header > ul > li:first-child {
+.header > ul > li > span {
+  margin-left: 5px;
   position: relative;
   top: 2px;
 }
