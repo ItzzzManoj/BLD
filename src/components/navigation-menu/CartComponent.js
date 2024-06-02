@@ -3,9 +3,9 @@ import { Component } from "react";
 class CartComponent extends Component {
   render() {
     return (
-      <div className="cart-container">
+      <div className="p-4 text-center text-4xl font-bold">
         <h1>
-          Sorry, we haven't supported cart in our application.!
+          Sorry, we haven't supported cart in our application!
         </h1>
       </div>
     )

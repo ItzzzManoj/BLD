@@ -1,6 +1,6 @@
 const ErrorComponent = () => {
   return (
-    <div className="error-container">
+    <div className="text-center font-extrabold text-4xl m-40 p-40">
       <h1>
         404
       </h1>

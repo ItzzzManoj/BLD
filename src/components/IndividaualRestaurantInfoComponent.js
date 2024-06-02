@@ -5,8 +5,8 @@ const IndividualRestaurantInfoComponent = (props) => {
   } = props;
 
   return (
-    <div className="restaurant-details">
-      <h2>
+    <div className="restaurant-details p-4 m-4 bg-pink-100 text-center">
+      <h2 className="font-extrabold text-3xl pb-5">
         Welcome to {resDetails.name}!
       </h2>
       <p>

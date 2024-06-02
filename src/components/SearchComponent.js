@@ -20,12 +20,12 @@ const SearchComponent = (props) => {
   };
   
   return (
-    <div className="search-container">
+    <div>
       <div>
         <input 
           type="search" 
           placeholder="Search Restaruant" 
-          className="search-input" 
+          className="border border-solid px-4 py-2" 
           value={searchText}
           onChange={(event) => {
             setSearchText(event.target.value);
@@ -33,7 +33,7 @@ const SearchComponent = (props) => {
         />
         <button 
           type="button" 
-          className="search-btn"
+          className="search-btn px-4 py-2 border bg-sky-200"
           onClick={getFilteredResList}
         >
           Search

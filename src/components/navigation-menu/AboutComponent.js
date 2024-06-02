@@ -36,8 +36,8 @@ class AboutComponent extends React.Component {
     console.log("Parent - render");
 
     return (
-      <div className='about-container'>
-        <h4 className='about-title'>Thanks for visiting for the about page!</h4>
+      <div className="m-4">
+        <h4 className="text-center font-bold text-2xl">Thanks for visiting for the about page!</h4>
         <UserDetailsComponent child={1} location ={this.props.location}/>
         <UserDetailsComponent child={2} location ={this.props.location}/>
       </div>

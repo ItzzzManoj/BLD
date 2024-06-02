@@ -51,11 +51,11 @@ class UserDetailsComponent extends React.Component {
     }
 
     return (
-      <div className='details-container'>
+      <div className="my-4 p-4 border border-solid rounded-xl bg-zinc-100">
         <h5>Name: {userInfo.name}</h5>
-        <h5>Login: {userInfo.login}</h5>
-        <h5>Location: {props.location}</h5>
-        <a href={userInfo.html_url} target='_blank'>
+        <h5 >Login: {userInfo.login}</h5>
+        <h5 >Location: {props.location}</h5>
+        <a href={userInfo.html_url} className="text-blue-400" target='_blank'>
           Github URL
         </a>
       </div>

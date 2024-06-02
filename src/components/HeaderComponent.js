@@ -10,47 +10,49 @@ const HeaderComponent = () => {
   onlineStatus = onlineStatus === 'online' ? '✅' : '🔴';
 
   return (
-    <header className="header">
+    <header className="flex justify-between items-center py-4 px-2 m-1 bg-red-100">
       <Link to="/">
-        <div className="logo-container">
+        <div className="flex items-center">
           <img
             src={LOGO_URL}
             alt="BLD Logo"
-            className="logo"
+            className="w-20"
           />
-          <span className="logo-name">
+          <span className="font-bold px-2 text-2xl">
             BLD
           </span>
         </div>
       </Link>
-      <ul>
-        <li>
+      <ul className="flex items-center">
+        <li className="px-2">
           Online Status: 
-          <span>
+          <span className="px-1">
             { onlineStatus }
           </span>
         </li>
-        <li>
+        <li className="px-2">
           <Link to="/about">
             About Us
             </Link>
         </li>
-        <li>
+        <li className="px-2">
           <Link to="/cart">
             Cart
           </Link>
         </li>
-        <li>
+        <li className="px-2">
           <Link to="/available-locations">
             Available Locations
           </Link>
         </li>
-        <li>
+        <li className="px-2">
           <Link to="/instamart">
             Instamart
           </Link>
         </li>
-        <LoginStatusComponent />
+        <li className="px-2">
+          <LoginStatusComponent />
+        </li>
       </ul>
     </header>
   );

@@ -14,7 +14,7 @@ const FilterButtonComponent = (props) => {
   }
 
   return (
-    <button className="filter-btn" onClick={getFilteredResList}>
+    <button className="bg-teal-200 px-4 py-2" onClick={getFilteredResList}>
       Filter top restaurants
     </button>
   );

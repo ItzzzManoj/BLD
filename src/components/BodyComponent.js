@@ -22,9 +22,9 @@ const BodyComponent = () => {
   }
 
   return (
-    <div className="body-container">
+    <div className="px-4">
       
-      <div className="search-filter-container">
+      <div className="flex py-4 px-8 justify-between items-center">
         <SearchComponent 
           resList={resList}
           filteredResList={filteredResList}
@@ -36,13 +36,13 @@ const BodyComponent = () => {
         />
       </div> 
       
-      <div className="card-container">
+      <div className="flex flex-wrap justify-center">
         {
           filteredResList.map((restaurant) => {
             const resRoute = "/restaurant-details/" + restaurant.info.id;
             
             return (
-              <Link className="individual-card" to={resRoute} key={restaurant.info.id}>
+              <Link className="p-4 m-4 w-[325px] border border-solid hover:bg-gray-100" to={resRoute} key={restaurant.info.id}>
                 <IndividualRestaurantComponent
                   dataObj={restaurant}
                 />

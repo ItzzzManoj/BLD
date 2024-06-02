@@ -7,6 +7,7 @@ const LoginStatusComponent = () => {
   return (
     <button
       type="button"
+      className="border border-solid border-black p-2"
       onClick={
         () => {
           loginStatus = loginStatus === 'Logout' ? 'Login' : 'Logout';

@@ -15,7 +15,7 @@ const RestaurantDetailsComponent = () => {
   }
 
   return (
-    <div className="res-details-container">
+    <div>
       <IndividualRestaurantInfoComponent resDetails={resDetails} />
       <IndividualRestaurantMenuComponent menuItems={menuItems} />
     </div>
