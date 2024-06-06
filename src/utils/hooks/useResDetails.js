@@ -19,12 +19,10 @@ const useResDetails = (params) => {
 
       const resDetails = resInfo?.data?.cards[2]?.card.card.info;
 
-      let resMenuItems = resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[3]?.card?.card;
-
-      resMenuItems = resMenuItems?.itemCards ? resMenuItems?.itemCards : resMenuItems?.categories[0]?.itemCards;
+      const _menuItems = resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
 
       setResDetails(resDetails);
-      setMenuItems(resMenuItems)
+      setMenuItems(_menuItems);
     };
 
     getResDetails();

@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 import ShimmerComponent from "./loading-state/ShimmerComponent";
 import useResDetails from "../utils/hooks/useResDetails";
-import IndividualRestaurantMenuComponent from "./IndividualRestaurantMenuComponent";
-import IndividualRestaurantInfoComponent from "./IndividaualRestaurantInfoComponent";
+import RestaurantMenuComponent from "./RestaurantMenuComponent";
+import RestaurantInfoComponent from "./RestaurantInfoComponent";
 
 const RestaurantDetailsComponent = () => {
 
@@ -15,9 +15,9 @@ const RestaurantDetailsComponent = () => {
   }
 
   return (
-    <div>
-      <IndividualRestaurantInfoComponent resDetails={resDetails} />
-      <IndividualRestaurantMenuComponent menuItems={menuItems} />
+    <div className="w-6/12 mx-auto">
+      <RestaurantInfoComponent resDetails={resDetails} />
+      <RestaurantMenuComponent menuItems={menuItems} />
     </div>
   )
 };
