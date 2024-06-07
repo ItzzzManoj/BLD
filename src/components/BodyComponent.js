@@ -1,4 +1,4 @@
-import IndividualRestaurantComponent from './IndividualRestaurantComponent';
+import IndividualRestaurantComponent, { AddPromotedLabel } from './IndividualRestaurantComponent';
 import SearchComponent from './SearchComponent';
 import FilterButtonComponent from './FilterButtonComponent';
 import ShimmerComponent from './loading-state/ShimmerComponent';
@@ -12,6 +12,8 @@ const BodyComponent = () => {
   let [ resList, filteredResList, setFilteredResList ] = useResList();
 
   let currentStatus = useOnlineStatus();
+
+  const PromotedRestaurant = AddPromotedLabel(IndividualRestaurantComponent);
 
   if (currentStatus === 'offline') {
     return <OfflineComponent />
@@ -38,14 +40,18 @@ const BodyComponent = () => {
       
       <div className="flex flex-wrap justify-center">
         {
-          filteredResList.map((restaurant) => {
+          filteredResList.map((restaurant, index) => {
             const resRoute = "/restaurant-details/" + restaurant.info.id;
             
             return (
-              <Link className="p-4 m-4 w-[325px] border border-solid hover:bg-gray-100" to={resRoute} key={restaurant.info.id}>
-                <IndividualRestaurantComponent
-                  dataObj={restaurant}
-                />
+              <Link className="p-4 m-4 w-[325px] border border-solid hover:bg-gray-100 relative" to={resRoute} key={restaurant.info.id}>
+                {
+                  index === 1 ? (
+                    <PromotedRestaurant dataObj={restaurant} />
+                  ) : (
+                    <IndividualRestaurantComponent dataObj={restaurant} />
+                  )
+                }
               </Link>
             );
           })

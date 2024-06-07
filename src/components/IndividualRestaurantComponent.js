@@ -29,4 +29,19 @@ const IndividualRestaurantComponent = (props) => {
   );
 };
 
+// Higher order component - (It's a function which takes in a componenent, enchance the component and returns it)
+
+export const AddPromotedLabel = (IndividualRestaurantComponent) => {
+  return (props) => {
+    return (
+      <div>
+        <span className="absolute top-0 left-0 bg-black text-white px-4 py-2 rounded-lg">
+          Promoted
+        </span>
+        <IndividualRestaurantComponent { ...props } />
+      </div>
+    );
+  };
+};
+
 export default IndividualRestaurantComponent;
