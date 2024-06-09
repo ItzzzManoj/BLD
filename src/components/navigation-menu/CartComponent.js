@@ -1,15 +1,48 @@
-import { Component } from "react";
+import { useSelector } from "react-redux";
+import IndividualItemComponent from "../IndividualItemComponent";
+import { useDispatch } from "react-redux";
+import { clearCart } from "../../utils/Store/cartSlice";
 
-class CartComponent extends Component {
-  render() {
+const CartComponent = () => {
+
+  const cartItems = useSelector(store => store.cart.items);
+
+  const dispatch = useDispatch();
+
+  const handleClearCart = () => {
+    dispatch(clearCart());
+  };
+
+  if (cartItems.length === 0) {
     return (
-      <div className="p-4 text-center text-4xl font-bold">
-        <h1>
-          Sorry, we haven't supported cart in our application!
+      <div className="text-center">
+        <h1 className="text-4xl font-bold pt-4">
+          Cart is empty! Add items
         </h1>
       </div>
-    )
+    );
   }
-}
+
+  return (
+    <div className="p-4 text-center w-6/12 mx-auto">
+      
+      <button className="m-2 p-2 bg-black text-white rounded-lg" onClick={handleClearCart}>
+        Clear cart
+      </button>
+
+      <div className="mt-10 border-top-2">
+       {
+         cartItems.map((itemCard) => {
+          return (
+            <IndividualItemComponent itemCard={itemCard} key={itemCard.name} />
+          );
+         })
+       }
+      </div>
+    
+    </div>
+  );
+};
 
 export default CartComponent;
+

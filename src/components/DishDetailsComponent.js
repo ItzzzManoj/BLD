@@ -34,7 +34,7 @@ const DishDetailsComponent = ({ itemCategory }) => {
         <div>
           {
             itemCards.map((itemCard) => {
-              return <IndividualItemComponent itemCard={itemCard}/>;
+              return <IndividualItemComponent itemCard={itemCard} key={itemCard.name}/>;
             })
           }
         </div>

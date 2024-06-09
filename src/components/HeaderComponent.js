@@ -4,12 +4,15 @@ import LoginStatusComponent from './navigation-menu/LoginStatusComponent';
 import useOnlineStatus from '../utils/hooks/useOnlineStatus';
 import { useContext } from 'react';
 import UserContext from '../utils/contexts/UserContext';
+import { useSelector } from 'react-redux';
 
 const HeaderComponent = () => {
 
   const {
     user
   } = useContext(UserContext);
+
+  const cartItems = useSelector((store) => store.cart.items);
 
   let onlineStatus = useOnlineStatus();
 
@@ -41,9 +44,9 @@ const HeaderComponent = () => {
             About Us
             </Link>
         </li>
-        <li className="px-2">
+        <li className="px-2 font-semibold">
           <Link to="/cart">
-            Cart
+            Cart - ({cartItems.length}) Items
           </Link>
         </li>
         <li className="px-2">
