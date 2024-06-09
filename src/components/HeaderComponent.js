@@ -2,8 +2,14 @@ import { LOGO_URL } from '../utils/constants';
 import { Link } from "react-router-dom";
 import LoginStatusComponent from './navigation-menu/LoginStatusComponent';
 import useOnlineStatus from '../utils/hooks/useOnlineStatus';
+import { useContext } from 'react';
+import UserContext from '../utils/contexts/UserContext';
 
 const HeaderComponent = () => {
+
+  const {
+    user
+  } = useContext(UserContext);
 
   let onlineStatus = useOnlineStatus();
 
@@ -52,6 +58,12 @@ const HeaderComponent = () => {
         </li>
         <li className="px-2">
           <LoginStatusComponent />
+        </li>
+        <li className="px-2">
+          😎 Welcome, 
+          <span className="text-slate-700 ms-1">
+            { user }
+          </span>
         </li>
       </ul>
     </header>

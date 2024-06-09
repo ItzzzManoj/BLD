@@ -1,5 +1,6 @@
 import React from 'react';
 import UserDetailsComponent from '../UserDetailsComponent';
+import UserContext from '../../utils/contexts/UserContext';
 
 class AboutComponent extends React.Component {
 
@@ -37,7 +38,17 @@ class AboutComponent extends React.Component {
 
     return (
       <div className="m-4">
-        <h4 className="text-center font-bold text-2xl">Thanks for visiting for the about page!</h4>
+        <UserContext.Consumer>
+          {
+            ({ user }) => {
+              return (
+                <h4 className="text-center font-bold text-2xl my-5">
+                  Hi {user}, Thanks for visiting for the about page!
+                </h4>
+              )
+            }
+          }
+        </UserContext.Consumer>
         <UserDetailsComponent child={1} location ={this.props.location}/>
         <UserDetailsComponent child={2} location ={this.props.location}/>
       </div>
