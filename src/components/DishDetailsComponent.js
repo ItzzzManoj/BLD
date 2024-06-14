@@ -1,7 +1,7 @@
 import { useState } from "react";
 import IndividualItemComponent from "./IndividualItemComponent";
 
-const DishDetailsComponent = ({ itemCategory }) => {
+const DishDetailsComponent = ({ itemCategory, showMenu, setShowMenu }) => {
   
   let {
     card: {
@@ -12,10 +12,8 @@ const DishDetailsComponent = ({ itemCategory }) => {
     } = {},
   } = itemCategory;
 
-  let [showMenu, setShowMenu] = useState(false);
-
   function getShowMenu() {
-    setShowMenu(!showMenu);
+    setShowMenu();
   }
   
   return (
