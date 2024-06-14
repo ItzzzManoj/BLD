@@ -6,10 +6,17 @@ import { Link } from 'react-router-dom';
 import useResList from '../utils/hooks/useResList';
 import useOnlineStatus from '../utils/hooks/useOnlineStatus';
 import OfflineComponent from './OfflineComponent';
+import UserContext from '../utils/contexts/UserContext';
+import { useContext } from 'react';
 
 const BodyComponent = () => {
 
   let [ resList, filteredResList, setFilteredResList ] = useResList();
+
+  let {
+    user,
+    setUserName
+  } = useContext(UserContext);
 
   let currentStatus = useOnlineStatus();
 
@@ -32,6 +39,17 @@ const BodyComponent = () => {
           filteredResList={filteredResList}
           setFilteredResList={setFilteredResList}
         />
+        <div>
+          <label className="border bg-slate-300 px-4 py-3">Username</label>
+          <input 
+            type="text" 
+            className="border px-4 py-2" 
+            value={user} 
+            onChange={(event) => 
+              setUserName(event.target.value)
+            }
+          />
+        </div>
         <FilterButtonComponent
           filteredResList={filteredResList}
           setFilteredResList={setFilteredResList}

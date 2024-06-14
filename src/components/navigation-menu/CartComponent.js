@@ -32,9 +32,9 @@ const CartComponent = () => {
 
       <div className="mt-10 border-top-2">
        {
-         cartItems.map((itemCard) => {
+         cartItems.map((itemCard, index) => {
           return (
-            <IndividualItemComponent itemCard={itemCard} key={itemCard.name} />
+            <IndividualItemComponent itemCard={itemCard} key={index} />
           );
          })
        }

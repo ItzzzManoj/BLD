@@ -9,7 +9,7 @@ const DishDetailsComponent = ({ itemCategory }) => {
         title,
         itemCards = []
       } = {}
-    } = {}
+    } = {},
   } = itemCategory;
 
   let [showMenu, setShowMenu] = useState(false);
@@ -34,7 +34,7 @@ const DishDetailsComponent = ({ itemCategory }) => {
         <div>
           {
             itemCards.map((itemCard) => {
-              return <IndividualItemComponent itemCard={itemCard} key={itemCard.name}/>;
+              return <IndividualItemComponent itemCard={itemCard} key={itemCard.card.info.id}/>;
             })
           }
         </div>

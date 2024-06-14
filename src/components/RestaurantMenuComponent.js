@@ -14,7 +14,14 @@ const RestaurantMenuComponent = (props) => {
     <div className="m-4">
       {
         individualMenuList.map((itemCategory) => {
-          return <DishDetailsComponent itemCategory={itemCategory} key={itemCategory.title}/>;
+          let {
+            card: {
+              card: {
+                title
+              } = {}
+            } = {}
+          } = itemCategory;
+          return <DishDetailsComponent itemCategory={itemCategory} key={title} />;
         })
       }
     </div>
